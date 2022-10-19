@@ -3,6 +3,11 @@
   padding:0;
   margin: 0;
 }
+@font-face {
+  font-family: 'MyWebFont';
+  src:  url('myfont.woff2') format('woff2'),
+}
+
 
 .hide {
   display: none;
