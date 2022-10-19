@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Harry Potter', sans-serif;
+  font-size: 50px;    
+  color: goldenrod;
+                                         
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin: 30px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  margin: 30px;
+  margin-top: 100px;
+}
+
+.text {
+  text-align: center;
+  width: 40%;
+  display: flex;
+
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.q1, .q2, .q3, .q4 {
+  display: flex;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  padding: 10px;
+  margin: 10px;
+}
+
+.q1:hover {
+  background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.q2:hover {
+  background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.q3:hover {
+  background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.q4:hover {
+  background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  
+}
+
+body {
+  background-image: url(https://fathersontv.one/wp-content/uploads/2022/06/Harry-Potter-10-Secrets-About-Hogwarts-You-Didnt-Know.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.start-button {
+  height: 40px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin: 20px;
+}
+
+.start-button:hover {
+  background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+header {
+  padding: 20px;
+  background-color: #262626;
+}
+
+.questions {
+  margin: 20px;
+}
+
+.title, .end {
+  font-size: 50px;
+}
+
+.timer-count{
+  color: white;
+  font-size: 30px;
+  font-family: 'Harry Potter', sans-serif;
+  color: goldenrod;
+  width: 20px;
+  display: flex;
+  text-align: center;
+  }
+
+  .timediv {
+    position:absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+    padding-right: 200px;
+    
+  }
+
+  .question-section {
+  margin-top: 200px;
+  }
+
+  .triwizard {
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    height: 30px;
+  }
+
+  .resetbtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 30px;
+  }
+  .reset {
+    height: 40px;
+    width: 100px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  margin: 20px;
+  }
+
+  .reset:hover {
+    background-color: #fffdd0;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .submit {
+    background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  }
+  .submit:hover {
+    background-color: #fffdd0;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .score {
+    text-align: center;
+  }
