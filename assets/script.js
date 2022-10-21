@@ -125,7 +125,7 @@ function nextQuestion(event) {
   var correctAnswer = questions[cursor].answer;
   if (selection === correctAnswer) {
     alert("Congrats Muggle, that is correct!");
-    score += 10;
+    score += 1;
   } else {
     alert("OHHHH SORRY, Incorrect!");
     timeLeft -= 20;
@@ -184,14 +184,20 @@ startButton.addEventListener("click", function () {
 
 function savetoLocal() {
   var highScore = JSON.parse(localStorage.getItem("highscore")) || [];
+  var playerIn = JSON.parse(localStorage.getItem("initials")) || [];
   var winner = playerName;
-  highScore.push(winner);
+  highScore.push(score);
+  playerIn.push(winner);
+
   localStorage.setItem("highscore", JSON.stringify(highScore));
+  localStorage.setItem("initials", JSON.stringify(playerIn));
+
+  var playerInit 
 
   for ( let i = 0; i < highScore.length; i++) {
     var div = document.createElement('div');
     div.className = "score-show";
-    div.textContent = highScore[i] + "          " + "(" + "Points:" + "       " + score + ")" ;
+    div.textContent = playerIn[i] + " " + "(" + "Points" + " " + highScore[i] + ")";
     initNameEl.appendChild(div);
   }
   initialEl.value = '';
