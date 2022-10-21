@@ -1,4 +1,4 @@
-# ReadMe Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Harry Potter Quiz [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
       
 ## Table of Contents
 * [Description](#description)
@@ -11,21 +11,23 @@
 * [Questions](#questions)
   
 ## Description
-This application renders a README.md file using the terminal.
+Test your knowledge and how well you know Harry Potter and his wizarding world!
 
 ## Visuals
-![ReadMe-Generator](/assets/images/Screen%20Shot%202022-10-17%20at%201.00.19%20AM.png)
+![Harry-Potter-Quiz](./assets/images/Harry-Potter-Quiz%20(1).png)
+![Harry-Potter-Quiz](./assets/images/Harry-Potter-Quiz%20(2).png)
+![Harry-Potter-Quiz](./assets/images/Harry-Potter-Quiz.png)
       
 ## Installation
-Before using the application do a npm install.
+Click the start magic button to begin! No installation is required!
       
 ## Useage
-This application uses prompts in the terminal to render out a README.md file.
+Test you and your friends knowledge of the wizarding world!
       
 ## License
 MIT License
 
-Copyright (c) [2022] [ReadMe-Generator]
+Copyright (c) [2022] [Harry-Potter-Quiz]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -37,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Jennifer Arnold
       
 ## Test
-This application was tested by running node index.js and following the prompts. It rendered out the intended README.md file.
+I took the test multiple times and was able to log my scores!
       
 ## Questions
 For any questions please reach out to the following links:
