@@ -9,32 +9,19 @@ var questionEl = document.querySelector(".questions");
 var resetEl = document.querySelector(".reset");
 var submitEl = document.querySelector(".submit");
 var scoreEl = document.querySelector(".score");
+var initialEl = document.querySelector(".initials");
+var highScoreEl = document.querySelector(".highscores");
+var initNameEl = document.querySelector(".initname");
+var titleEl = document.querySelector(".hightitle");
 var q1El = document.querySelector(".q1");
 var q2El = document.querySelector(".q2");
 var q3El = document.querySelector(".q3");
 var q4El = document.querySelector(".q4");
 var cursor = 0;
 var score = 0;
+var timeLeft = 100;
 
-// function displayState () {
-//   if (state === 'start') {
-//     startEl.style,display = 'block';
-//     quizEl.style.display = 'none';
-//     endEl.style.display = 'none';
-//   }
-//   if (state === 'quiz') {
-//     startEl.style,display = 'none';
-//     quizEl.style.display = 'block';
-//     endEl.style.display = 'none';
-//     showQuestions();
-//   }
-//   if (state === 'end') {
-//     startEl.style,display = 'none';
-//     quizEl.style.display = 'none';
-//     endEl.style.display = 'block';
-//   }
-
-// }
+// Questions for the quiz
 
 var questions = [
   {
@@ -115,6 +102,8 @@ var questions = [
 ];
 console.log(questions);
 
+// Enables user to go to the next question via the Cursor / index of the questions array
+
 function displayQuestions() {
   questionEl.textContent = questions[cursor].title;
   q1El.textContent = questions[cursor].choices.a;
@@ -129,20 +118,22 @@ function displayQuestions() {
 }
 displayQuestions();
 
+// The event listener that triggers the next question. It also lets the player know if they have answered correctly or not.
 
 function nextQuestion(event) {
   var selection = event.target.textContent;
   var correctAnswer = questions[cursor].answer;
   if (selection === correctAnswer) {
     alert("Congrats Muggle, that is correct!");
-    score++;
+    score += 10;
   } else {
     alert("OHHHH SORRY, Incorrect!");
+    timeLeft -= 20;
+    
   }
   cursor++;
   console.log(score);
 
-  // for(i = 0; i < questions.length; i++)
   if (cursor === questions.length) {
     endQuiz();
   } else {
@@ -151,6 +142,8 @@ function nextQuestion(event) {
     showQuestions();
   }
 }
+
+// These determin what part of the quiz is showing pased on what part of the quiz you are on ie Start, Quiz, or End 
 
 function showQuestions() {
   quizEl.setAttribute("class", "");
@@ -164,46 +157,81 @@ function endQuiz() {
   scoreEl.textContent = 'You got' + ' ' + score + ' out of' + ' ' + questions.length + ' correct!';
 }
 
-
-// var titleText = questions[cursor];
-// quizEl.textContent = titleText;
-// }
+// Creates the timer and how long the player has left. Once time runs out it runs the endQuiz function which takes you to the final part of the quiz.
 
 function startTimer() {
-  var timeLeft = 100;
   var timeInterval = setInterval(function () {
     if (timeLeft > 1) {
       timeEl.textContent = "Tempus: " + timeLeft;
-      timeLeft--;
+      timeLeft--
     } else if (timeLeft === 1) {
       timeEl.textContent = "Tempus: " + timeLeft;
-      timeLeft--;
+      timeLeft--
     } else {
       timeEl.textContent = "";
       clearInterval(timeInterval);
+      endQuiz()
     }
   }, 1000);
 }
-startTimer();
+
 startButton.addEventListener("click", function () {
   showQuestions();
-  // displayState();
   startTimer();
 });
 
+// Saves a players name and score to the localstorage and is displayed on the screen.
 
+function savetoLocal() {
+  var highScore = JSON.parse(localStorage.getItem("highscore")) || [];
+  var winner = playerName;
+  highScore.push(winner);
+  localStorage.setItem("highscore", JSON.stringify(highScore));
 
-function resetScore() {
-  highScore = 0;
+  for ( let i = 0; i < highScore.length; i++) {
+    var div = document.createElement('div');
+    div.className = "score-show";
+    div.textContent = highScore[i] + "          " + "(" + "Points:" + "       " + score + ")" ;
+    initNameEl.appendChild(div);
+  }
+  initialEl.value = '';
+  console.log("NERD",highScore)
+}
+
+submitEl.addEventListener("click", function(event) {
+  event.preventDefault;
+  playerName = initialEl.value;
+  savetoLocal();
+})
+
   
-}
-function reset() {
-  quizEl.setAttribute("class", "hide");
-  startEl.setAttribute("class", "");
-  endEl.setAttribute("class", "hide");
-  cursor = 0;
-  // init();
-}
-resetEl.addEventListener("click",reset)
-// resetButton.addEventListener("click", resetScore);
-// init();
+  function reset() {
+    quizEl.setAttribute("class", "hide");
+    startEl.setAttribute("class", "");
+    endEl.setAttribute("class", "hide");
+    location.reload();
+    score = 0
+    cursor = 0
+    timeLeft = 100
+    
+    
+  }
+  resetEl.addEventListener("click",reset)
+  
+  
+  // Trial and Error Code trying to get things to function.
+
+  // submitEl.addEventListener('click', function() {
+    //   var subInput = initialEl.value;
+    //   var totalPoints = score;
+    // localStorage.setItem("initials", JSON.stringify(subInput)) 
+    // localStorage.setItem("score", JSON.stringify(totalPoints))
+    // var x = JSON.parse(localStorage.getItem("initials")) || [];
+    // var y = localStorage.getItem("score")
+    // initNameEl.innerHTML = x
+    // highScoreEl.innerHTML = y
+    // initialEl.push(x);
+    // })
+  
+  
+  
