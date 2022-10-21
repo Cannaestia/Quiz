@@ -8,7 +8,7 @@
   font-family: 'Harry Potter Regular';
   font-style: normal;
   font-weight: 100;
-  src: url(/assets/css/HARRP___.TTF) format('woff');
+  src: url(./HARRP___.TTF) format('woff');
   }
 
 .hide {
