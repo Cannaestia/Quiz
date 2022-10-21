@@ -90,7 +90,7 @@ p {
 }
 
 body {
-  background-image: url(https://fathersontv.one/wp-content/uploads/2022/06/Harry-Potter-10-Secrets-About-Hogwarts-You-Didnt-Know.jpg);
+  background-image: url(https://bi.im-g.pl/im/1b/7b/19/z26721051AMP,Harry-Potter--filmowy-kadr-z-serii--ktora-byla-wie.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -142,7 +142,8 @@ header {
 .timer-count{
   color: white;
   font-size: 30px;
-  font-family: 'Harry Potter', sans-serif;
+  font-family: Harry Potter Regular;
+  font-weight: 100;
   color: goldenrod;
   width: 20px;
   display: flex;
