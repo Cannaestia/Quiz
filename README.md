@@ -2,6 +2,7 @@
       
 ## Table of Contents
 * [Description](#description)
+* [Live Link](#livelink)
 * [Visuals](#visuals)
 * [Installation](#installation)
 * [Useage](#useage)
@@ -12,6 +13,9 @@
   
 ## Description
 Test your knowledge and how well you know Harry Potter and his wizarding world!
+
+## Live Link
+https://cannaestia.github.io/Quiz/
 
 ## Visuals
 ![Harry-Potter-Quiz](./assets/images/Harry-Potter-Quiz%20(1).png)
