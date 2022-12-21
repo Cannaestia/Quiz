@@ -21,6 +21,9 @@ var cursor = 0;
 var score = 0;
 var timeLeft = 100;
 
+window.onload = function() {
+  document.getElementById("my_audio").play();
+}
 // Questions for the quiz
 
 var questions = [
@@ -223,6 +226,7 @@ submitEl.addEventListener("click", function(event) {
     
   }
   resetEl.addEventListener("click",reset)
+
   
   
   // Trial and Error Code trying to get things to function.
