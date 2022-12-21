@@ -21,13 +21,6 @@ var cursor = 0;
 var score = 0;
 var timeLeft = 100;
 
-
-window.onload = function() {
-  const audio = document.getElementById("audio");
-  audio.play();
-}
-
-
 // Questions for the quiz
 
 var questions = [
@@ -231,21 +224,8 @@ submitEl.addEventListener("click", function(event) {
   }
   resetEl.addEventListener("click",reset)
 
-  
-  
-  // Trial and Error Code trying to get things to function.
-
-  // submitEl.addEventListener('click', function() {
-    //   var subInput = initialEl.value;
-    //   var totalPoints = score;
-    // localStorage.setItem("initials", JSON.stringify(subInput)) 
-    // localStorage.setItem("score", JSON.stringify(totalPoints))
-    // var x = JSON.parse(localStorage.getItem("initials")) || [];
-    // var y = localStorage.getItem("score")
-    // initNameEl.innerHTML = x
-    // highScoreEl.innerHTML = y
-    // initialEl.push(x);
-    // })
-  
+  window.onload = function () {
+    document.getElementById("audio").play();
+}
   
   
