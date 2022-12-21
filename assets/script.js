@@ -21,9 +21,10 @@ var cursor = 0;
 var score = 0;
 var timeLeft = 100;
 
-window.onload = function() {
-  document.getElementById("my_audio").play();
-}
+
+const audio = document.getElementById("audio");
+audio.play();
+
 // Questions for the quiz
 
 var questions = [
