@@ -22,8 +22,11 @@ var score = 0;
 var timeLeft = 100;
 
 
-const audio = document.getElementById("audio");
-audio.play();
+window.onload = function() {
+  const audio = document.getElementById("audio");
+  audio.play();
+}
+
 
 // Questions for the quiz
 
